@@ -9,7 +9,8 @@
 <meta property="og:description" content="Toda cor tem axé. Canecas, camisetas, oversize e mousepads sob encomenda.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0F1311">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="logo-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -42,6 +43,7 @@ h2{font-weight:800;font-size:clamp(34px,5vw,64px);letter-spacing:-1px;line-heigh
 header{position:sticky;top:0;z-index:20;background:rgba(15,19,17,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent}
 header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px}
 .marca{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--creme)}
+.logo-mini{width:52px;height:52px;border-radius:50%;background:#fff;object-fit:contain}
 .marca span{font-family:var(--titulo);font-weight:800;font-size:18px;letter-spacing:1px}
 nav{display:flex;flex-wrap:wrap;gap:24px;font-size:15px}
 nav a{color:var(--creme);text-decoration:none;padding:8px 0}
@@ -101,6 +103,18 @@ nav a:hover{color:var(--ouro)}
 @media (max-width:600px){.galeria{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card span{padding:0 10px 12px;font-size:13px}}
 .nota{margin:20px 0 0;font-size:14px;color:var(--texto-4)}
 
+
+/* Caneca mágica */
+.magica{margin-top:24px;display:flex;flex-wrap:wrap;gap:32px;align-items:center;background:var(--noite-2);border-radius:24px;padding:32px;border:1px solid var(--linha)}
+.magica-texto{flex:999 1 340px;min-width:0;display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.magica-texto h3{font-size:clamp(26px,3.4vw,40px)}
+.magica-texto p{margin:0;font-size:17px;line-height:1.55;color:var(--texto-2);max-width:520px}
+.magica-demo{all:unset;cursor:pointer;flex:1 1 220px;max-width:300px;aspect-ratio:4/5;border-radius:20px;overflow:hidden;position:relative}
+.magica-demo:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+.magica-demo img{width:100%;height:100%;object-fit:cover}
+.magica-capa{position:absolute;inset:0;background:#0b0b0b;display:flex;align-items:flex-end;justify-content:center;padding:20px;color:var(--creme);font-weight:600;text-align:center;transition:opacity 2.2s ease}
+.magica-demo:hover .magica-capa,.magica-demo[aria-pressed="true"] .magica-capa{opacity:0}
+@media (prefers-reduced-motion:reduce){.magica-capa{transition:none}}
 /* Como pedir */
 .como{background:var(--creme);color:var(--noite);margin-top:64px}
 .como .wrap{padding-top:112px;padding-bottom:112px}
@@ -111,8 +125,8 @@ nav a:hover{color:var(--ouro)}
 
 /* Sobre */
 .sobre{display:flex;flex-wrap:wrap;gap:56px;align-items:center;padding-top:112px;padding-bottom:112px}
-.sobre-arte{flex:1 1 320px;min-width:0;aspect-ratio:4/5;max-height:520px;border-radius:200px 200px 24px 24px;background:var(--noite-2);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
-.sobre-arte .faixas{position:absolute;inset:0;display:grid;grid-template-rows:repeat(4,1fr);opacity:.16}
+.sobre-arte{flex:1 1 320px;min-width:0;max-width:480px;aspect-ratio:1/1;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:4%;box-shadow:0 0 0 10px var(--noite),0 0 0 14px var(--ouro)}
+.sobre-arte img{width:100%;height:100%;object-fit:contain}
 .sobre-texto{flex:999 1 460px;min-width:0;display:flex;flex-direction:column;gap:24px}
 .sobre-texto h2{font-size:clamp(30px,4vw,52px);line-height:1.05}
 .sobre-texto p{margin:0;font-size:18px;line-height:1.6;color:var(--texto-2)}
@@ -140,7 +154,7 @@ dialog p{color:var(--creme);text-align:center;margin:14px 0 0;font-size:16px}
 <header>
   <div class="wrap">
     <a href="#topo" class="marca" aria-label="Camaleão Sublimações, início">
-      <img src="favicon.svg" width="44" height="44" alt="">
+      <img class="logo-mini" src="logo.webp" width="52" height="52" alt="">
       <span>CAMALEÃO</span>
     </a>
     <nav aria-label="Principal">
@@ -156,9 +170,9 @@ dialog p{color:var(--creme);text-align:center;margin:14px 0 0;font-size:16px}
 <main id="topo">
   <section class="wrap hero">
     <div class="hero-texto">
-      <span class="kicker" style="color:var(--verde)">Sublimação artesanal sob encomenda</span>
+      <span class="kicker" style="color:var(--verde)">Incorporando personalidade</span>
       <h1>Toda cor<br>tem <span style="color:var(--ouro)">axé.</span></h1>
-      <p>Canecas, camisetas, oversize de academia e mousepads com arte de orixás, entidades, xamanismo e capoeira — ou com a sua ideia. Cada peça é criada por quem vive o que estampa.</p>
+      <p>Sublimação artesanal sob encomenda: canecas (inclusive mágicas), camisetas, oversize de academia e mousepads com a sua ideia, a sua fé ou a marca da sua empresa. Do santo de devoção ao orixá, do brinde corporativo à camiseta do treino.</p>
       <div class="acoes">
         <a class="btn btn-creme" href="#produtos">Ver produtos</a>
         <a class="btn btn-linha js-pedido" href="https://ig.me/m/camaleaoariane" target="_blank" rel="noopener">Criar peça personalizada</a>
@@ -174,8 +188,8 @@ dialog p{color:var(--creme);text-align:center;margin:14px 0 0;font-size:16px}
 
   <div class="faixa" aria-hidden="true">
     <div class="faixa-trilho">
-      <p>ORIXÁS · ENTIDADES · XAMANISMO · CAPOEIRA · OVERSIZE · PERSONALIZADOS ·</p>
-      <p>ORIXÁS · ENTIDADES · XAMANISMO · CAPOEIRA · OVERSIZE · PERSONALIZADOS ·</p>
+      <p>PERSONALIZADOS EM GERAL · BRINDES PARA EMPRESAS · CANECAS MÁGICAS · SANTOS CATÓLICOS · ORIXÁS · ENTIDADES · XAMANISMO · CAPOEIRA · OVERSIZE ·</p>
+      <p>PERSONALIZADOS EM GERAL · BRINDES PARA EMPRESAS · CANECAS MÁGICAS · SANTOS CATÓLICOS · ORIXÁS · ENTIDADES · XAMANISMO · CAPOEIRA · OVERSIZE ·</p>
     </div>
   </div>
 
@@ -193,12 +207,24 @@ dialog p{color:var(--creme);text-align:center;margin:14px 0 0;font-size:16px}
     </div>
 
     <div class="painel ativo" role="tabpanel" id="p-canecas" aria-labelledby="t-canecas">
-      <div class="painel-info"><h3>Canecas</h3><p>Cerâmica branca 325 ml · arte em volta toda</p></div>
+      <div class="painel-info"><h3>Canecas</h3><p>Cerâmica branca 325 ml e caneca mágica · arte em volta toda</p></div>
       <div class="galeria" style="--ar:4/5">
         <button class="card"><img src="caneca-oxum.webp" alt="Caneca com arte de Oxum" loading="lazy" width="928" height="1152"><span>Oxum</span></button>
         <button class="card"><img src="caneca-iemanja.webp" alt="Caneca com arte de Iemanjá" loading="lazy" width="928" height="1152"><span>Iemanjá</span></button>
         <button class="card"><img src="caneca-preto-velho.webp" alt="Caneca com arte de Preto-Velho" loading="lazy" width="928" height="1152"><span>Preto-Velho</span></button>
         <button class="card"><img src="caneca-onca.webp" alt="Caneca com onça-pintada e grafismos xamânicos" loading="lazy" width="928" height="1152"><span>Onça — animal de poder</span></button>
+      </div>
+      <div class="magica">
+        <div class="magica-texto">
+          <span class="kicker" style="color:var(--ouro)">Novidade</span>
+          <h3>Caneca mágica</h3>
+          <p>Fria, ela é toda preta. Basta colocar café, chá ou qualquer bebida quente para a arte aparecer aos poucos — e sumir de novo quando esfria. Presente que surpreende.</p>
+          <a class="btn btn-ouro js-pedido" href="https://ig.me/m/camaleaoariane" target="_blank" rel="noopener">Quero uma caneca mágica</a>
+        </div>
+        <button class="magica-demo" aria-pressed="false" aria-label="Simular bebida quente na caneca mágica">
+          <img src="caneca-iemanja.webp" alt="Arte de Iemanjá revelada na caneca mágica" loading="lazy" width="928" height="1152">
+          <span class="magica-capa" aria-hidden="true"><span>☕ Toque para<br>esquentar</span></span>
+        </button>
       </div>
     </div>
 
@@ -273,9 +299,8 @@ dialog p{color:var(--creme);text-align:center;margin:14px 0 0;font-size:16px}
   </section>
 
   <section id="sobre" class="wrap sobre">
-    <div class="sobre-arte" aria-hidden="true">
-      <div class="faixas"><div style="background:var(--azul)"></div><div style="background:var(--verde)"></div><div style="background:var(--ouro)"></div><div style="background:var(--rubro)"></div></div>
-      <img src="favicon.svg" width="240" height="240" alt="" style="position:relative">
+    <div class="sobre-arte">
+      <img src="logo.webp" width="640" height="640" alt="Logo Camaleão: camaleão colorido em aquarela sobre um galho" loading="lazy">
     </div>
     <div class="sobre-texto">
       <span class="kicker" style="color:var(--ouro)">Quem faz</span>
@@ -308,7 +333,7 @@ dialog p{color:var(--creme);text-align:center;margin:14px 0 0;font-size:16px}
 
 <footer>
   <div class="wrap">
-    <span>© <span id="ano">2026</span> Camaleão Sublimações · Sorocaba/SP</span>
+    <span>© <span id="ano">2026</span> Camaleão Sublimações · Incorporando personalidade · Sorocaba/SP</span>
     <span><a href="https://instagram.com/camaleaoariane" target="_blank" rel="noopener">@camaleaoariane</a> · <a href="mailto:camaleaosublima@gmail.com">camaleaosublima@gmail.com</a></span>
   </div>
 </footer>
@@ -357,6 +382,11 @@ document.querySelectorAll("[data-aba]").forEach(c =>
   c.addEventListener("click", () => ativar(document.getElementById(c.dataset.aba)))
 );
 
+
+/* Caneca mágica: toque alterna quente/frio */
+document.querySelectorAll(".magica-demo").forEach(b => b.addEventListener("click", () => {
+  b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") !== "true");
+}));
 /* Ampliar imagem */
 const dlg = document.getElementById("zoom");
 document.querySelectorAll(".card").forEach(c => c.addEventListener("click", () => {

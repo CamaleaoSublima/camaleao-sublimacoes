@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Camaleão Sublimações — Toda cor tem axé</title>
+<meta name="description" content="Canecas, camisetas, oversize de academia e mousepads sublimados com arte de orixás, entidades, xamanismo e capoeira. Peças sob encomenda.">
+<meta property="og:title" content="Camaleão Sublimações">
+<meta property="og:description" content="Toda cor tem axé. Canecas, camisetas, oversize e mousepads sob encomenda.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0F1311">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noite:#0F1311; --noite-2:#171C19; --linha:#2A322D;
+  --creme:#F4ECDD; --texto-2:#D6DBD3; --texto-3:#C9CFC6; --texto-4:#A9B0A6;
+  --verde:#2FA36B; --ouro:#E5A823; --rubro:#D9442E; --azul:#2F7FD1;
+  --titulo:'Unbounded',system-ui,sans-serif; --corpo:'Instrument Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--noite);color:var(--creme);font-family:var(--corpo);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:var(--ouro)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--titulo);margin:0}
+h2{font-weight:800;font-size:clamp(34px,5vw,64px);letter-spacing:-1px;line-height:1}
+.kicker{font-size:14px;letter-spacing:4px;font-weight:600;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 26px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;transition:transform .15s ease, background .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-ouro{background:var(--ouro);color:var(--noite)}
+.btn-creme{background:var(--creme);color:var(--noite)}
+.btn-linha{border:2px solid var(--creme);color:var(--creme)}
+.btn-noite{background:var(--noite);color:var(--creme)}
+.btn-linha-escura{border:2px solid var(--noite);color:var(--noite)}
+.btn svg{width:20px;height:20px;flex-shrink:0}
+
+/* Header */
+header{position:sticky;top:0;z-index:20;background:rgba(15,19,17,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent}
+header .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--creme)}
+.marca span{font-family:var(--titulo);font-weight:800;font-size:18px;letter-spacing:1px}
+nav{display:flex;flex-wrap:wrap;gap:24px;font-size:15px}
+nav a{color:var(--creme);text-decoration:none;padding:8px 0}
+nav a:hover{color:var(--ouro)}
+@media (max-width:720px){nav{display:none} header .btn{padding:10px 18px;font-size:14px;min-height:44px}}
+
+/* Hero */
+.hero{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding-top:56px;padding-bottom:96px}
+.hero-texto{flex:999 1 480px;min-width:0;display:flex;flex-direction:column;gap:28px}
+.hero h1{font-weight:800;font-size:clamp(48px,8vw,112px);line-height:.95;letter-spacing:-3px}
+.hero p{margin:0;font-size:20px;line-height:1.5;max-width:560px;color:var(--texto-2)}
+.hero .acoes{display:flex;flex-wrap:wrap;gap:12px}
+.mosaico{flex:1 1 380px;min-width:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.mosaico figure{margin:0;overflow:hidden;position:relative}
+.mosaico img{width:100%;height:100%;object-fit:cover}
+.mosaico figure:nth-child(1){aspect-ratio:4/5;border-radius:24px 24px 24px 120px;background:var(--ouro)}
+.mosaico figure:nth-child(2){aspect-ratio:4/5;border-radius:120px 24px 24px 24px;background:var(--verde);margin-top:48px}
+.mosaico figure:nth-child(3){aspect-ratio:1/1;border-radius:24px;background:var(--rubro)}
+.mosaico figure:nth-child(4){aspect-ratio:1/1;border-radius:24px 24px 120px 24px;background:var(--azul);margin-top:48px}
+
+/* Faixa */
+.faixa{background:var(--ouro);color:var(--noite);overflow:hidden;padding:18px 0}
+.faixa-trilho{display:flex;width:max-content;animation:rolar 40s linear infinite}
+.faixa p{margin:0;white-space:nowrap;font-family:var(--titulo);font-weight:800;font-size:clamp(18px,2.4vw,28px);letter-spacing:1px;padding-right:32px}
+@keyframes rolar{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.faixa-trilho{animation:none}}
+
+/* Coleções */
+.secao{padding-top:112px;padding-bottom:48px}
+.secao-topo{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:40px}
+.secao-topo p{margin:0;max-width:440px;color:var(--texto-3);font-size:17px;line-height:1.5}
+.colecoes{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.colecao{text-decoration:none;color:var(--creme);background:var(--noite-2);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s ease}
+.colecao:hover{transform:translateY(-4px)}
+.colecao .foto{height:260px;overflow:hidden;border-bottom:6px solid var(--cor)}
+.colecao .foto img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.colecao:hover .foto img{transform:scale(1.05)}
+.colecao div.txt{padding:24px;display:flex;flex-direction:column;gap:8px}
+.colecao strong{font-family:var(--titulo);font-size:22px}
+.colecao span{color:var(--texto-3);line-height:1.45}
+
+/* Produtos */
+.abas{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.aba{font:600 15px var(--corpo);min-height:44px;padding:10px 22px;border-radius:999px;border:2px solid var(--linha);background:transparent;color:var(--creme);cursor:pointer}
+.aba[aria-selected="true"]{background:var(--cor);border-color:var(--cor);color:var(--noite)}
+.aba:focus-visible,.btn:focus-visible,.card:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+.painel{display:none}
+.painel.ativo{display:block}
+.painel-info{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:20px}
+.painel-info h3{font-size:clamp(22px,3vw,32px)}
+.painel-info p{margin:0;color:var(--texto-3);font-size:16px}
+.galeria{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.card{all:unset;cursor:zoom-in;display:flex;flex-direction:column;gap:10px;border-radius:20px;overflow:hidden;background:var(--noite-2)}
+.card img{width:100%;height:auto;aspect-ratio:var(--ar,1/1);object-fit:cover;transition:transform .4s ease}
+.card:hover img{transform:scale(1.04)}
+.card span{padding:0 16px 16px;font-size:15px;color:var(--texto-2)}
+@media (max-width:600px){.galeria{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card span{padding:0 10px 12px;font-size:13px}}
+.nota{margin:20px 0 0;font-size:14px;color:var(--texto-4)}
+
+/* Como pedir */
+.como{background:var(--creme);color:var(--noite);margin-top:64px}
+.como .wrap{padding-top:112px;padding-bottom:112px}
+.passos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;margin-top:48px}
+.passo{border-top:3px solid var(--noite);padding-top:20px;display:flex;flex-direction:column;gap:12px}
+.passo strong{font-family:var(--titulo);font-size:20px}
+.passo span{line-height:1.5}
+
+/* Sobre */
+.sobre{display:flex;flex-wrap:wrap;gap:56px;align-items:center;padding-top:112px;padding-bottom:112px}
+.sobre-arte{flex:1 1 320px;min-width:0;aspect-ratio:4/5;max-height:520px;border-radius:200px 200px 24px 24px;background:var(--noite-2);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.sobre-arte .faixas{position:absolute;inset:0;display:grid;grid-template-rows:repeat(4,1fr);opacity:.16}
+.sobre-texto{flex:999 1 460px;min-width:0;display:flex;flex-direction:column;gap:24px}
+.sobre-texto h2{font-size:clamp(30px,4vw,52px);line-height:1.05}
+.sobre-texto p{margin:0;font-size:18px;line-height:1.6;color:var(--texto-2)}
+
+/* Contato */
+.contato{background:var(--verde);color:var(--noite)}
+.contato .wrap{padding-top:96px;padding-bottom:96px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:32px}
+.contato h2{font-size:clamp(36px,6vw,80px);line-height:.95;letter-spacing:-2px;flex:999 1 460px;min-width:0}
+.contato .acoes{display:flex;flex-direction:column;gap:12px;flex:1 1 300px}
+
+footer .wrap{padding-top:40px;padding-bottom:40px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font-size:14px;color:var(--texto-4)}
+footer a{color:var(--texto-3)}
+
+/* Lightbox */
+dialog{border:none;padding:0;background:transparent;max-width:min(92vw,900px);max-height:92vh}
+dialog::backdrop{background:rgba(8,10,9,.9)}
+dialog img{max-height:82vh;width:auto;margin:0 auto;border-radius:16px}
+dialog p{color:var(--creme);text-align:center;margin:14px 0 0;font-size:16px}
+.fechar{position:fixed;top:16px;right:16px;width:48px;height:48px;border-radius:50%;border:none;background:var(--creme);color:var(--noite);font-size:26px;line-height:1;cursor:pointer}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#topo" class="marca" aria-label="Camaleão Sublimações, início">
+      <img src="favicon.svg" width="44" height="44" alt="">
+      <span>CAMALEÃO</span>
+    </a>
+    <nav aria-label="Principal">
+      <a href="#produtos">Produtos</a>
+      <a href="#colecoes">Coleções</a>
+      <a href="#como">Como pedir</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+    <a class="btn btn-ouro js-pedido" href="https://ig.me/m/camaleaoariane" target="_blank" rel="noopener">Encomendar</a>
+  </div>
+</header>
+
+<main id="topo">
+  <section class="wrap hero">
+    <div class="hero-texto">
+      <span class="kicker" style="color:var(--verde)">Sublimação artesanal sob encomenda</span>
+      <h1>Toda cor<br>tem <span style="color:var(--ouro)">axé.</span></h1>
+      <p>Canecas, camisetas, oversize de academia e mousepads com arte de orixás, entidades, xamanismo e capoeira — ou com a sua ideia. Cada peça é criada por quem vive o que estampa.</p>
+      <div class="acoes">
+        <a class="btn btn-creme" href="#produtos">Ver produtos</a>
+        <a class="btn btn-linha js-pedido" href="https://ig.me/m/camaleaoariane" target="_blank" rel="noopener">Criar peça personalizada</a>
+      </div>
+    </div>
+    <div class="mosaico">
+      <figure><img src="img/caneca-oxum.webp" alt="Caneca branca com arte de Oxum em tons dourados" width="928" height="1152"></figure>
+      <figure><img src="img/camiseta-oxossi.webp" alt="Camiseta branca com arte de Oxóssi na mata" width="928" height="1152"></figure>
+      <figure><img src="img/oversize-onca.webp" alt="Modelo vestindo oversize preta com onça-pintada dourada" width="1024" height="1024"></figure>
+      <figure><img src="img/mousepad-iemanja.webp" alt="Mousepad gamer com arte de Iemanjá sobre o mar à noite" width="1024" height="1024" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <div class="faixa" aria-hidden="true">
+    <div class="faixa-trilho">
+      <p>ORIXÁS · ENTIDADES · XAMANISMO · CAPOEIRA · OVERSIZE · PERSONALIZADOS ·</p>
+      <p>ORIXÁS · ENTIDADES · XAMANISMO · CAPOEIRA · OVERSIZE · PERSONALIZADOS ·</p>
+    </div>
+  </div>
+
+  <section id="produtos" class="wrap secao">
+    <div class="secao-topo">
+      <h2>Produtos</h2>
+      <p>Escolha a peça, escolha a arte — ou traga a sua ideia que a gente cria junto.</p>
+    </div>
+
+    <div class="abas" role="tablist" aria-label="Tipos de produto">
+      <button class="aba" role="tab" id="t-canecas" aria-controls="p-canecas" aria-selected="true" style="--cor:var(--ouro)">Canecas</button>
+      <button class="aba" role="tab" id="t-camisetas" aria-controls="p-camisetas" aria-selected="false" tabindex="-1" style="--cor:var(--verde)">Camisetas</button>
+      <button class="aba" role="tab" id="t-oversize" aria-controls="p-oversize" aria-selected="false" tabindex="-1" style="--cor:var(--rubro)">Oversize</button>
+      <button class="aba" role="tab" id="t-mousepads" aria-controls="p-mousepads" aria-selected="false" tabindex="-1" style="--cor:var(--azul)">Mousepads</button>
+    </div>
+
+    <div class="painel ativo" role="tabpanel" id="p-canecas" aria-labelledby="t-canecas">
+      <div class="painel-info"><h3>Canecas</h3><p>Cerâmica branca 325 ml · arte em volta toda</p></div>
+      <div class="galeria" style="--ar:4/5">
+        <button class="card"><img src="img/caneca-oxum.webp" alt="Caneca com arte de Oxum" loading="lazy" width="928" height="1152"><span>Oxum</span></button>
+        <button class="card"><img src="img/caneca-iemanja.webp" alt="Caneca com arte de Iemanjá" loading="lazy" width="928" height="1152"><span>Iemanjá</span></button>
+        <button class="card"><img src="img/caneca-preto-velho.webp" alt="Caneca com arte de Preto-Velho" loading="lazy" width="928" height="1152"><span>Preto-Velho</span></button>
+        <button class="card"><img src="img/caneca-onca.webp" alt="Caneca com onça-pintada e grafismos xamânicos" loading="lazy" width="928" height="1152"><span>Onça — animal de poder</span></button>
+      </div>
+    </div>
+
+    <div class="painel" role="tabpanel" id="p-camisetas" aria-labelledby="t-camisetas">
+      <div class="painel-info"><h3>Camisetas</h3><p>Poliéster com toque macio · P ao GG</p></div>
+      <div class="galeria" style="--ar:4/5">
+        <button class="card"><img src="img/camiseta-oxossi.webp" alt="Camiseta com arte de Oxóssi" loading="lazy" width="928" height="1152"><span>Oxóssi</span></button>
+        <button class="card"><img src="img/camiseta-xango.webp" alt="Camiseta com arte de Xangô" loading="lazy" width="928" height="1152"><span>Xangô</span></button>
+        <button class="card"><img src="img/camiseta-caboclo.webp" alt="Camiseta com arte de Caboclo" loading="lazy" width="928" height="1152"><span>Caboclo</span></button>
+        <button class="card"><img src="img/camiseta-capoeira.webp" alt="Camiseta com roda de capoeira" loading="lazy" width="928" height="1152"><span>Roda de capoeira</span></button>
+      </div>
+    </div>
+
+    <div class="painel" role="tabpanel" id="p-oversize" aria-labelledby="t-oversize">
+      <div class="painel-info"><h3>Oversize de academia</h3><p>Dry fit · modelagem ampla · estampa frente ou costas</p></div>
+      <div class="galeria" style="--ar:1/1">
+        <button class="card"><img src="img/oversize-onca.webp" alt="Oversize preta com onça-pintada" loading="lazy" width="1024" height="1024"><span>Onça</span></button>
+        <button class="card"><img src="img/oversize-xango.webp" alt="Oversize branca com arte de Xangô" loading="lazy" width="1024" height="1024"><span>Xangô</span></button>
+        <button class="card"><img src="img/oversize-guerreiro.webp" alt="Oversize branca com guerreiro nas costas" loading="lazy" width="1024" height="1024"><span>Guerreiro</span></button>
+        <button class="card"><img src="img/oversize-capoeira.webp" alt="Oversize off-white com capoeirista nas costas" loading="lazy" width="1024" height="1024"><span>Capoeira</span></button>
+      </div>
+    </div>
+
+    <div class="painel" role="tabpanel" id="p-mousepads" aria-labelledby="t-mousepads">
+      <div class="painel-info"><h3>Mousepads</h3><p>Padrão e gamer · base antiderrapante</p></div>
+      <div class="galeria" style="--ar:1/1">
+        <button class="card"><img src="img/mousepad-iemanja.webp" alt="Mousepad gamer com Iemanjá" loading="lazy" width="1024" height="1024"><span>Iemanjá — gamer</span></button>
+        <button class="card"><img src="img/mousepad-oxossi.webp" alt="Mousepad gamer com Oxóssi" loading="lazy" width="1024" height="1024"><span>Oxóssi — gamer</span></button>
+        <button class="card"><img src="img/mousepad-mandala.webp" alt="Mousepad com mandala xamânica de penas e tambor" loading="lazy" width="1024" height="1024"><span>Mandala xamânica</span></button>
+        <button class="card"><img src="img/mousepad-capoeira.webp" alt="Mousepad com roda de capoeira vista de cima" loading="lazy" width="1024" height="1024"><span>Roda de capoeira</span></button>
+      </div>
+    </div>
+
+    <p class="nota">Imagens ilustrativas. A arte final de cada peça é aprovada com você antes da produção.</p>
+  </section>
+
+  <section id="colecoes" class="wrap secao">
+    <div class="secao-topo">
+      <h2>Coleções</h2>
+      <p>Arte feita com fundamento e respeito às tradições.</p>
+    </div>
+    <div class="colecoes">
+      <a class="colecao" href="#produtos" data-aba="t-canecas" style="--cor:var(--ouro)">
+        <div class="foto"><img src="img/caneca-oxum.webp" alt="" loading="lazy"></div>
+        <div class="txt"><strong>Orixás</strong><span>Cores, símbolos e ferramentas de cada orixá.</span></div>
+      </a>
+      <a class="colecao" href="#produtos" data-aba="t-canecas" style="--cor:var(--rubro)">
+        <div class="foto"><img src="img/caneca-preto-velho.webp" alt="" loading="lazy"></div>
+        <div class="txt"><strong>Entidades</strong><span>Caboclos, pretos-velhos, baianos e demais linhas.</span></div>
+      </a>
+      <a class="colecao" href="#produtos" data-aba="t-mousepads" style="--cor:var(--verde)">
+        <div class="foto"><img src="img/mousepad-mandala.webp" alt="" loading="lazy"></div>
+        <div class="txt"><strong>Xamanismo</strong><span>Animais de poder, medicina da floresta, grafismos.</span></div>
+      </a>
+      <a class="colecao" href="#produtos" data-aba="t-camisetas" style="--cor:var(--azul)">
+        <div class="foto"><img src="img/camiseta-capoeira.webp" alt="" loading="lazy"></div>
+        <div class="txt"><strong>Capoeira</strong><span>Camisetas de grupo, rodas, batizados e eventos.</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="como" class="como">
+    <div class="wrap">
+      <h2>Como pedir</h2>
+      <div class="passos">
+        <div class="passo"><strong>1. Conte a ideia</strong><span>Mande uma mensagem com o produto, a quantidade e o que quer estampar.</span></div>
+        <div class="passo"><strong>2. Aprove a arte</strong><span>Você recebe a prévia e pede ajustes antes da produção.</span></div>
+        <div class="passo"><strong>3. Sublimação</strong><span>Produção artesanal, peça por peça. O prazo é combinado na aprovação.</span></div>
+        <div class="passo"><strong>4. Retire ou receba</strong><span>Retirada em Sorocaba/SP ou envio combinado com você.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="wrap sobre">
+    <div class="sobre-arte" aria-hidden="true">
+      <div class="faixas"><div style="background:var(--azul)"></div><div style="background:var(--verde)"></div><div style="background:var(--ouro)"></div><div style="background:var(--rubro)"></div></div>
+      <img src="favicon.svg" width="240" height="240" alt="" style="position:relative">
+    </div>
+    <div class="sobre-texto">
+      <span class="kicker" style="color:var(--ouro)">Quem faz</span>
+      <h2>Arte de quem vive o fundamento.</h2>
+      <p>Por trás da Camaleão está Ariane — mãe de umbanda, sacerdotisa do xamanismo e capoeirista. Cada estampa nasce de dentro do terreiro, da roda e da mata, e não de um catálogo.</p>
+      <p>Como o camaleão, a marca muda de cor para vestir a fé de cada pessoa.</p>
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <div class="wrap">
+      <h2>Qual é a sua cor?</h2>
+      <div class="acoes">
+        <a class="btn btn-noite js-whats" href="#" target="_blank" rel="noopener" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+          Chamar no WhatsApp
+        </a>
+        <a class="btn btn-noite" href="https://ig.me/m/camaleaoariane" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          Mensagem no Instagram
+        </a>
+        <a class="btn btn-linha-escura" href="mailto:camaleaosublima@gmail.com?subject=Encomenda%20Camale%C3%A3o">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          camaleaosublima@gmail.com
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="ano">2026</span> Camaleão Sublimações · Sorocaba/SP</span>
+    <span><a href="https://instagram.com/camaleaoariane" target="_blank" rel="noopener">@camaleaoariane</a> · <a href="mailto:camaleaosublima@gmail.com">camaleaosublima@gmail.com</a></span>
+  </div>
+</footer>
+
+<dialog id="zoom" aria-label="Imagem ampliada">
+  <button class="fechar" aria-label="Fechar">×</button>
+  <img src="" alt="">
+  <p></p>
+</dialog>
+
+<script>
+/* ===== CONFIGURAÇÃO =====
+   Para ativar os botões de WhatsApp, coloque o número com DDI + DDD, só dígitos.
+   Exemplo: const WHATSAPP = "5515999999999";
+   Deixando vazio, os pedidos vão para o Direct do Instagram. */
+const WHATSAPP = "";
+const MENSAGEM = "Olá! Vi o site da Camaleão e quero encomendar.";
+
+if (WHATSAPP) {
+  const link = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MENSAGEM);
+  document.querySelectorAll(".js-whats").forEach(a => { a.href = link; a.hidden = false; });
+  document.querySelectorAll(".js-pedido").forEach(a => { a.href = link; });
+}
+
+document.getElementById("ano").textContent = new Date().getFullYear();
+
+/* Abas de produto */
+const abas = [...document.querySelectorAll('[role="tab"]')];
+function ativar(aba, foco) {
+  abas.forEach(a => {
+    const sel = a === aba;
+    a.setAttribute("aria-selected", sel);
+    a.tabIndex = sel ? 0 : -1;
+    document.getElementById(a.getAttribute("aria-controls")).classList.toggle("ativo", sel);
+  });
+  if (foco) aba.focus();
+}
+abas.forEach((a, i) => {
+  a.addEventListener("click", () => ativar(a));
+  a.addEventListener("keydown", e => {
+    if (e.key === "ArrowRight") ativar(abas[(i + 1) % abas.length], true);
+    if (e.key === "ArrowLeft") ativar(abas[(i - 1 + abas.length) % abas.length], true);
+  });
+});
+document.querySelectorAll("[data-aba]").forEach(c =>
+  c.addEventListener("click", () => ativar(document.getElementById(c.dataset.aba)))
+);
+
+/* Ampliar imagem */
+const dlg = document.getElementById("zoom");
+document.querySelectorAll(".card").forEach(c => c.addEventListener("click", () => {
+  const img = c.querySelector("img");
+  dlg.querySelector("img").src = img.src;
+  dlg.querySelector("img").alt = img.alt;
+  dlg.querySelector("p").textContent = c.querySelector("span").textContent;
+  dlg.showModal();
+}));
+dlg.querySelector(".fechar").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+</script>
+</body>
+</html>
